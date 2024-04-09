@@ -22,6 +22,10 @@
           (+ (math/log nr) x)
           (recur rst nr (double x)))))))
 
+(defn- neg-inf?
+  [v]
+  (= v ##-Inf))
+
 (defn resampling [gf args observations n-samples]
   ;; https://github.com/probcomp/Gen.jl/blob/master/src/inference/importance.jl#L77...L95
   (let [result (gf/generate gf args observations)
@@ -31,9 +35,10 @@
       (let [candidate (gf/generate gf args observations)
             candidate-model-trace (:trace candidate)
             log-weight (:weight candidate)]
-        (vswap! log-total-weight #(logsumexp [log-weight %]))
-        (when (dist/bernoulli (math/exp (- log-weight @log-total-weight)))
-          (vreset! model-trace candidate-model-trace))))
+        (when-not (neg-inf? log-weight)
+          (vswap! log-total-weight #(logsumexp [log-weight %]))
+          (when (dist/bernoulli (math/exp (- log-weight @log-total-weight)))
+            (vreset! model-trace candidate-model-trace)))))
     (let [log-ml-estimate (- @log-total-weight (math/log n-samples))]
       {:trace @model-trace
        :weight log-ml-estimate})))
