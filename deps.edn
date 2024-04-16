@@ -33,6 +33,11 @@
                 org.clojure/test.check {:mvn/version "1.1.1"}
                 same/ish {:mvn/version "0.1.6"}}}
 
+  :benchmark
+  {:extra-paths ["benchmark"]
+   :extra-deps {criterium/criterium {:mvn/version "0.4.6"}}
+   :main-opts ["-m" "benchmark-runner"]}
+
   ;; See https://github.com/cognitect-labs/test-runner for invocation
   ;; instructions, or call `clojure -X:test:runner`.
   :runner
