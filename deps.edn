@@ -35,8 +35,12 @@
 
   :benchmark
   {:extra-paths ["benchmark"]
-   :extra-deps {criterium/criterium {:mvn/version "0.4.6"}}
-   :main-opts ["-m" "benchmark-runner"]}
+   :extra-deps {io.github.cognitect-labs/test-runner
+                {:git/tag "v0.5.1" :git/sha "dfb30dd"}
+                criterium/criterium {:mvn/version "0.4.6"}}
+   :main-opts ["-m" "cognitect.test-runner"]
+   :exec-args {:includes [:benchmark] :dirs ["benchmark"] :patterns [".*-benchmark$"]}
+   :exec-fn cognitect.test-runner.api/test}
 
   ;; See https://github.com/cognitect-labs/test-runner for invocation
   ;; instructions, or call `clojure -X:test:runner`.

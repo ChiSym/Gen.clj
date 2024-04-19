@@ -29,7 +29,7 @@
 
   benchmark:clj
   {:doc "Run CLJ benchmarks."
-   :task (shell "clojure -M:benchmark")}
+   :task (shell "clojure -X:benchmark:test")}
 
   build-static
   {:doc "Generate a fresh static build."
