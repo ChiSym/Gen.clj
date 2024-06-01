@@ -27,7 +27,7 @@
 ;;
 ;; Apache Commons Numbers Gamma. Github.
 ;; https://github.com/apache/commons-numbers-gamma
-
+;;
 ;; Weisstein, Eric W. Lanczos Approximation. From MathWorld--A Wolfram Web
 ;; Resource. https://mathworld.wolfram.com/LanczosApproximation.html
 ;;
@@ -47,7 +47,7 @@
 ;; Software (TOMS), 12(4), pp.377-393.
 ;; https://dl.acm.org/doi/10.1145/22721.23109
 
-(def LANCZOS_G
+(def ^:const LANCZOS_G
   "The Lanczos constant.
 
   Based on Godfrey's research (Godfrey, P., 2001)."
@@ -59,7 +59,8 @@
   Based on Wolfram (Weisstein, Eric W., Lanczos Approximation). The coefficients
   were computed by Godfrey (Godfrey, P., 2001). See
   `LanczosApproximation` (Apache Commons Numbers Gamma)."
-  [x]
+  ^double
+  [^double x]
   {:pre [(> x 8)]}
   (let [c [[14 3.6899182659531625E-6]
            [13 -2.6190838401581408E-5]
@@ -84,7 +85,8 @@
   function (NSWC Mathematical Library, 1993) which defines the coefficients of
   the Maclaurin series expansion (A, B, C, P, Q). See also `InvGamma1pm` (Apache
   Commons Numbers Gamma)."
-  [x]
+  ^double
+  [^double x]
   {:pre [(>= x -0.5)
          (<= x 1.5)]}
   (let [t (if (<= x 0.5) x (- (- x 0.5) 0.5))
@@ -145,7 +147,8 @@
   Based on the NSWC implementation (Morris, A.H., 1993). See the `DGMLN1`
   function (NSWC Mathematical Library, 1993) and `LogGamma1p` (Apache Commons
   Numbers Gamma)."
-  [x]
+  ^double
+  [^double x]
   {:pre [(>= x -0.5)
          (<= x 1.5)]}
   (- (Math/log1p (inv-gamma-1pm1 x))))
@@ -158,7 +161,8 @@
   the NSWC implementation (Morris, A.H., 1993). See the `DGAMLN` function (NSWC
   Mathematical Library, 1993). For x > 8, follows the Lanczos approximation
   method. See `LogGamma` (Apache Commons Numbers Gamma)."
-  [x]
+  ^double
+  [^double x]
   {:pre [(pos? x)]}
   (cond
     (< x 0.5) (- (log-gamma-1p x) (Math/log x))
@@ -181,7 +185,8 @@
   Based on Wolfram (Weisstein, Eric W., Gamma Function). Follows the NSWC
   implementation (Morris, A.H., 1993). See the `DGAMMA` function (NSWC
   Mathematical Library, 1993) and `Gamma` (Apache Commons Numbers Gamma)."
-  [x]
+  ^double
+  [^double x]
   (let [abs-x (abs x)]
     (if (<= abs-x 20)
       (if (>= x 1)

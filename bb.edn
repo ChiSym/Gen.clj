@@ -27,6 +27,10 @@
   {:doc "Run CLJS tests."
    :task (shell "npm run test")}
 
+  benchmark:clj
+  {:doc "Run CLJ benchmarks."
+   :task (shell "clojure -X:benchmark:test")}
+
   build-static
   {:doc "Generate a fresh static build."
    :task
