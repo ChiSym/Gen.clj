@@ -1,8 +1,8 @@
 *.class
 *.jar
-.clj-kondo/.lock
-.clj-kondo/inline-configs
-.clj-kondo/.cache
+.lsp
+.clj-kondo
+.vscode
 public/
 .clerk/
 .cpcache/

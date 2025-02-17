@@ -1,1 +1,1 @@
-{:config-paths ["../resources/clj-kondo.exports/io.github.inferenceql/gen.clj"]}
+{:config-paths ["../resources/clj-kondo.exports/io.github.chisym/gen.clj"]}

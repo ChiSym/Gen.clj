@@ -22,7 +22,7 @@
 
 ;; ## Variables
 
-(def lib 'io.github.inferenceql/gen.clj)
+(def lib 'io.github.chisym/gen.clj)
 (def version "0.1.0")
 
 (def pom-deps
@@ -70,9 +70,9 @@
                   :version version
                   :scm
                   {:tag (str "v" version)
-                   :connection "scm:git:git://github.com/InferenceQL/gen.clj.git"
-                   :developConnection "scm:git:ssh://git@github.com/InferenceQL/gen.clj.git"
-                   :url "https://github.com/InferenceQL/gen.clj"}
+                   :connection "scm:git:git://github.com/ChiSym/gen.clj.git"
+                   :developConnection "scm:git:ssh://git@github.com/ChiSym/gen.clj.git"
+                   :url "https://github.com/ChiSym/gen.clj"}
                   :basis basis
                   :src-pom "template/pom.xml"
                   :src-dirs ["src"]})

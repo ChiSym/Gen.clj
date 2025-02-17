@@ -462,7 +462,7 @@
 ;; The following two functions use a brittle form of macro-rewriting; we should
 ;; really look at the namespace and local macro environments to try and see if a
 ;; particular symbol is bound to `#'gen.dynamic/{trace!,splice!}`. See
-;; https://github.com/InferenceQL/gen.clj/issues/42.
+;; https://github.com/ChiSym/gen.clj/issues/42.
 
 (defn trace-form?
   "Returns true if `form` is a trace form."
