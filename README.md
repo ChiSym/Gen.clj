@@ -38,7 +38,7 @@ key:
 
 ``` clojure
 io.github.chisym/gen.clj {:git/url "https://github.com/chisym/gen.clj"
-                               :git/sha "3283de82c2b25870b530c22948ac3cdc1b6996d4"}
+                               :git/sha "967b6eea72afc4e2b369f162299ee102097e4b20"}
 ```
 
 ### Learn
