@@ -6,7 +6,7 @@
 
 ## Github Pages, docs notebook
 
-The project's [Github Pages site](https://inferenceql.github.io/gen.clj) hosts
+The project's [Github Pages site](https://chisym.github.io/gen.clj) hosts
 an interactive [Clerk](https://github.com/nextjournal/clerk) notebook
 demonstrating the library's use.
 
@@ -41,19 +41,19 @@ To build and release to Github Pages:
 bb release-gh-pages
 ```
 
-This will ship the site to https://inferenceql.github.io/gen.clj.
+This will ship the site to https://chisym.github.io/gen.clj.
 
 ## Publishing to Clojars
 
 The template for the project's `pom.xml` lives at
-[`template/pom.xml`](https://github.com/InferenceQL/gen.clj/blob/main/template/pom.xml).
+[`template/pom.xml`](https://github.com/ChiSym/gen.clj/blob/main/template/pom.xml).
 
 To create a new release:
 
 - Update the version in
-  [build.clj](https://github.com/InferenceQL/gen.clj/blob/main/build.clj)
+  [build.clj](https://github.com/ChiSym/gen.clj/blob/main/build.clj)
 - Make a new [Github
-  Release](https://github.com/InferenceQL/gen.clj/releases) with tag
+  Release](https://github.com/ChiSym/gen.clj/releases) with tag
   `v<the-new-version>`.
 
 Submitting the release will create the new tag and trigger the following
@@ -68,8 +68,8 @@ The new release will appear on Clojars.
 ## Publishing JS
 
 > **Note**
-> To publish `emmy-viewers` JS, you must be part of the [InferenceQL
-> GitHub organization](https://github.com/inferenceql).
+> To publish `emmy-viewers` JS, you must be part of the [ChiSym
+> GitHub organization](https://github.com/chisym).
 
 - Create a classic personal access token with `read:org` permissions.
 - Add a line like this to your bash profile:
@@ -85,7 +85,7 @@ Run the following code with the `:nextjournal/clerk` alias activated:
 
 (b/release->cas!
  {:cljs-namespaces '[gen.sci-extensions]
-  :cas-namespace "inferenceql"
+  :cas-namespace "chisym"
   :prefix "gen.clj"
   :token (System/getenv "GITHUB_TOKEN")})
 ```

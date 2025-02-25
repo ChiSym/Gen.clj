@@ -37,7 +37,7 @@ install Gen.clj, add the following entry to your `deps.edn` under the `:deps`
 key:
 
 ``` clojure
-io.github.inferenceql/gen.clj {:git/url "https://github.com/inferenceql/gen.clj"
+io.github.chisym/gen.clj {:git/url "https://github.com/chisym/gen.clj"
                                :git/sha "3283de82c2b25870b530c22948ac3cdc1b6996d4"}
 ```
 
@@ -45,7 +45,7 @@ io.github.inferenceql/gen.clj {:git/url "https://github.com/inferenceql/gen.clj"
 
 The project's [interactive documentation][gen-clj-url] was generated from
 the notebooks in the
-[`examples`](https://github.com/InferenceQL/gen.clj/tree/main/examples)
+[`examples`](https://github.com/ChiSym/gen.clj/tree/main/examples)
 directory using Nextjournal's [Clerk][clerk-url]. If you'd like to edit or play
 with the documentation or demos, you'll need to install
 
@@ -55,7 +55,7 @@ with the documentation or demos, you'll need to install
 Next, clone the repository:
 
 ```bash
-git clone git@github.com:InferenceQL/gen.clj.git
+git clone git@github.com:ChiSym/gen.clj.git
 cd gen.clj
 ```
 
@@ -67,7 +67,7 @@ bb clerk-watch
 
 This will open a browser window to `http://localhost:7777` with the contents of
 the ["Introduction to Modeling in
-Gen.clj"](https://github.com/InferenceQL/gen.clj/blob/main/examples/intro_to_modeling.clj)
+Gen.clj"](https://github.com/ChiSym/gen.clj/blob/main/examples/intro_to_modeling.clj)
 notebook loaded. Any edits you make to `examples/intro_to_modeling.clj` on your
 filesystem will update this page, and editing any other file in `examples`, like
 `examples/introduction.clj`, will load that file's namespace into the browser.
@@ -109,14 +109,14 @@ If you use Gen in your research, please cite our PLDI paper:
 
 Distributed under the [Apache 2.0](LICENSE) license. See [LICENSE](LICENSE).
 
-[build-status-url]: https://github.com/InferenceQL/gen.clj/actions/workflows/tests.yaml?query=branch%3Amain
-[build-status]: https://github.com/InferenceQL/gen.clj/workflows/tests/badge.svg?branch=main
+[build-status-url]: https://github.com/ChiSym/gen.clj/actions/workflows/tests.yaml?query=branch%3Amain
+[build-status]: https://github.com/ChiSym/gen.clj/workflows/tests/badge.svg?branch=main
 [clerk-url]: https://github.com/nextjournal/clerk
-[codecov-url]: https://codecov.io/github/inferenceql/gen.clj
-[codecov]: https://img.shields.io/codecov/c/github/inferenceql/gen.clj/main.svg?maxAge=3600
+[codecov-url]: https://codecov.io/github/chisym/gen.clj
+[codecov]: https://img.shields.io/codecov/c/github/chisym/gen.clj/main.svg?maxAge=3600
 [experimental-badge]: https://img.shields.io/badge/stability-experimental-orange.svg
-[gen-clj-url]: https://github.clerk.garden/inferenceql/gen.clj
+[gen-clj-url]: https://github.clerk.garden/chisym/gen.clj
 [license-url]: LICENSE
 [license]: https://img.shields.io/badge/License-Apache_2.0-brightgreen.svg
-[linter-url]: https://github.com/InferenceQL/gen.clj/actions/workflows/linter.yaml?query=branch%3Amain
-[linter]: https://github.com/InferenceQL/gen.clj/workflows/linter/badge.svg?branch=main
+[linter-url]: https://github.com/ChiSym/gen.clj/actions/workflows/linter.yaml?query=branch%3Amain
+[linter]: https://github.com/ChiSym/gen.clj/workflows/linter/badge.svg?branch=main

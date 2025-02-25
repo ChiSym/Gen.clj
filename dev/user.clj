@@ -26,7 +26,7 @@
   (assoc defaults
          :browse? false
          :paths notebooks
-         :git/url "https://github.com/InferenceQL/gen.clj"))
+         :git/url "https://github.com/ChiSym/gen.clj"))
 
 (defn serve!
   ([] (serve! {}))
